@@ -68,6 +68,8 @@ namespace KeyLogger
             RegistryKey rk = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
             rk.SetValue(keyName, programPath);*/
 
+            //if_else trong public Form1();
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
