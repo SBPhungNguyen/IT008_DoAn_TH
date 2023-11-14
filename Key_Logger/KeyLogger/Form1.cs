@@ -26,6 +26,25 @@ namespace KeyLogger
         //Encrypt
 
         //Decrypt
+        static string Decrypt(byte[] cipheredtext, byte[] key, byte[] iv)
+        {
+            string simpletext = String.Empty;
+            using (Aes aes = Aes.Create())
+            {
+                ICryptoTransform decryptor = aes.CreateDecryptor(key, iv);
+                using (MemoryStream memoryStream = new MemoryStream(cipheredtext))
+                {
+                    using (CryptoStream cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read))
+                    {
+                        using (StreamReader streamReader = new StreamReader(cryptoStream))
+                        {
+                            simpletext = streamReader.ReadToEnd();
+                        }
+                    }
+                }
+            }
+            return simpletext;
+        }
 
         //
         public Form1()
@@ -80,12 +99,18 @@ namespace KeyLogger
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            timer1.Interval = 1000;
+            timer1.Start();
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            k = k + e.KeyCode.ToString() + " ";
+            label4.Text = k;
 
+            textBox1.Text = e.KeyCode.ToString();
+            textBox2.Text = e.KeyValue.ToString();
+            textBox3.Text = e.KeyData.ToString();
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
