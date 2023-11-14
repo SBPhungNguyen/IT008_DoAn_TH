@@ -1,0 +1,10 @@
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\KeyLogger\bin\Debug\KeyLogger.exe.config
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\KeyLogger\bin\Debug\KeyLogger.exe
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\KeyLogger\bin\Debug\KeyLogger.pdb
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\KeyLogger\obj\Debug\KeyLogger.csproj.AssemblyReference.cache
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\KeyLogger\obj\Debug\KeyLogger.Form1.resources
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\KeyLogger\obj\Debug\KeyLogger.Properties.Resources.resources
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\KeyLogger\obj\Debug\KeyLogger.csproj.GenerateResource.cache
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\KeyLogger\obj\Debug\KeyLogger.csproj.CoreCompileInputs.cache
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\KeyLogger\obj\Debug\KeyLogger.exe
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\KeyLogger\obj\Debug\KeyLogger.pdb
