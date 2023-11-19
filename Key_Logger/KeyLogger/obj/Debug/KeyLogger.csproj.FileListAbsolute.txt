@@ -8,3 +8,13 @@ D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\KeyLogger\obj\Debug\KeyLogger.cspr
 D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\KeyLogger\obj\Debug\KeyLogger.csproj.CoreCompileInputs.cache
 D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\KeyLogger\obj\Debug\KeyLogger.exe
 D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\KeyLogger\obj\Debug\KeyLogger.pdb
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\KeyLogger\bin\Debug\KeyLogger.exe.config
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\KeyLogger\bin\Debug\KeyLogger.exe
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\KeyLogger\bin\Debug\KeyLogger.pdb
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\KeyLogger\obj\Debug\KeyLogger.csproj.AssemblyReference.cache
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\KeyLogger\obj\Debug\KeyLogger.Form1.resources
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\KeyLogger\obj\Debug\KeyLogger.Properties.Resources.resources
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\KeyLogger\obj\Debug\KeyLogger.csproj.GenerateResource.cache
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\KeyLogger\obj\Debug\KeyLogger.csproj.CoreCompileInputs.cache
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\KeyLogger\obj\Debug\KeyLogger.exe
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\KeyLogger\obj\Debug\KeyLogger.pdb

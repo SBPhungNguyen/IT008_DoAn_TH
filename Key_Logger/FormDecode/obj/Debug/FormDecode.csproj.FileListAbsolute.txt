@@ -1,0 +1,10 @@
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\FormDecode\bin\Debug\FormDecode.exe.config
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\FormDecode\bin\Debug\FormDecode.exe
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\FormDecode\bin\Debug\FormDecode.pdb
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.csproj.AssemblyReference.cache
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.Form1.resources
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.Properties.Resources.resources
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.csproj.GenerateResource.cache
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.csproj.CoreCompileInputs.cache
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.exe
+C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.pdb
