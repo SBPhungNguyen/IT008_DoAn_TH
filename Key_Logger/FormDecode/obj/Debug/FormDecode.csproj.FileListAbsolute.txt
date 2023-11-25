@@ -8,3 +8,13 @@ C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\FormDecode\obj\
 C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.csproj.CoreCompileInputs.cache
 C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.exe
 C:\Users\TRUNGKIEN\Downloads\IT008Clone\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.pdb
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\FormDecode\bin\Debug\FormDecode.exe.config
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\FormDecode\bin\Debug\FormDecode.exe
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\FormDecode\bin\Debug\FormDecode.pdb
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.csproj.AssemblyReference.cache
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.Form1.resources
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.Properties.Resources.resources
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.csproj.GenerateResource.cache
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.csproj.CoreCompileInputs.cache
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.exe
+D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.pdb
