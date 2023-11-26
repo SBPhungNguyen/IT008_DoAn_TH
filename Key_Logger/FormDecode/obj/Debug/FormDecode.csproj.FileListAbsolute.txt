@@ -18,3 +18,13 @@ D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.cs
 D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.csproj.CoreCompileInputs.cache
 D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.exe
 D:\GitHub\IT008_Lab2\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.pdb
+C:\Users\MN\Documents\GitHub\IT008_DoAn_TH\Key_Logger\FormDecode\bin\Debug\FormDecode.exe.config
+C:\Users\MN\Documents\GitHub\IT008_DoAn_TH\Key_Logger\FormDecode\bin\Debug\FormDecode.exe
+C:\Users\MN\Documents\GitHub\IT008_DoAn_TH\Key_Logger\FormDecode\bin\Debug\FormDecode.pdb
+C:\Users\MN\Documents\GitHub\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.csproj.AssemblyReference.cache
+C:\Users\MN\Documents\GitHub\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.Form1.resources
+C:\Users\MN\Documents\GitHub\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.Properties.Resources.resources
+C:\Users\MN\Documents\GitHub\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.csproj.GenerateResource.cache
+C:\Users\MN\Documents\GitHub\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.csproj.CoreCompileInputs.cache
+C:\Users\MN\Documents\GitHub\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.exe
+C:\Users\MN\Documents\GitHub\IT008_DoAn_TH\Key_Logger\FormDecode\obj\Debug\FormDecode.pdb
