@@ -17,6 +17,8 @@ namespace FormDecode
         string file;
         string pass;
         string decode;
+        string strkey = "A171AA811A6D353C8BC40F82B689F889";
+        string striv = "C87799A3280FE1BC574DED5BC85D003F";
         public Form1()
         {
             InitializeComponent();
@@ -57,7 +59,7 @@ namespace FormDecode
         {
             FileContent.Text = "";
             string line;
-            if (Key.Text == "" || IV.Text == "" || FileLocation.Text == "")
+            if (/*Key.Text == "" || IV.Text == "" || */FileLocation.Text == "")
             {
                 FileContent.Text = "Vui lòng chọn File và nhập đầy đủ Key và IV (đây không phải giải mã)";
             }
@@ -69,11 +71,11 @@ namespace FormDecode
                     byte[] iv = new byte[16];
                     for (int i = 0; i < 32; i += 2)
                     {
-                        key[i / 2] = Convert.ToByte(Key.Text.Substring(i, 2), 16);
+                        key[i / 2] = Convert.ToByte(strkey.Substring(i, 2), 16);
                     }
                     for (int i = 0; i < 32; i += 2)
                     {
-                        iv[i / 2] = Convert.ToByte(IV.Text.Substring(i, 2), 16);
+                        iv[i / 2] = Convert.ToByte(striv.Substring(i, 2), 16);
                     }
                     using (StreamReader sr = new StreamReader(file))
                     {

