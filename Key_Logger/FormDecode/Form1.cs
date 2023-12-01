@@ -52,6 +52,8 @@ namespace FormDecode
             {
                 file = openFileDialog.FileName;
                 FileLocation.Text = file;
+                string fileContent = File.ReadAllText(file);
+                FileContentOG.Text = fileContent;
             }
         }
 
@@ -96,8 +98,6 @@ namespace FormDecode
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Key.Text = "";
-            IV.Text = "";
             FileContent.Text = "";
         }
     }
