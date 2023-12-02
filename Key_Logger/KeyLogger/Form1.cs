@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -188,12 +189,95 @@ namespace KeyLogger
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            k = k + e.KeyCode.ToString() + " ";
+            //
+            string wrote = "";
+
+            if (e.KeyCode == Keys.Space)
+                wrote = " ";
+            // nhap so
+            else if (char.IsDigit((char)e.KeyCode) && e.Modifiers != Keys.Shift)
+            {
+                wrote = ((char)e.KeyCode).ToString();
+            }
+            // nhap to hop phim voi Shift
+            else if (e.Modifiers == Keys.Shift && !char.IsLetter((char)e.KeyCode))
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.D1: wrote = "!"; break;
+                    case Keys.D2: wrote = "@"; break;
+                    case Keys.D3: wrote = "#"; break;
+                    case Keys.D4: wrote = "$"; break;
+                    case Keys.D5: wrote = "%"; break;
+                    case Keys.D6: wrote = "^"; break;
+                    case Keys.D7: wrote = "&"; break;
+                    case Keys.D8: wrote = "*"; break;
+                    case Keys.D9: wrote = "("; break;
+                    case Keys.D0: wrote = ")"; break;
+                    case Keys.OemMinus: wrote = "_"; break;
+                    case Keys.Oemplus: wrote = "+"; break;
+                    case Keys.OemQuestion: wrote = "?"; break;
+                    case Keys.OemPeriod: wrote = ">"; break;
+                    case Keys.Oemcomma: wrote = "<"; break;
+                }
+            }
+            else if (e.Modifiers != Keys.Shift && !char.IsLetter((char)e.KeyCode))
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.OemMinus: wrote = "-"; break;
+                    case Keys.Oemplus: wrote = "="; break;
+                    case Keys.Oemtilde: wrote = "`"; break;
+                    case Keys.OemQuestion: wrote = "/"; break;
+                    case Keys.OemPeriod: wrote = "."; break;
+                    case Keys.Oemcomma: wrote = ","; break;
+                }
+            }
+            // Nhap chu in hoa + cac Oem dang ki tu
+            else if (char.IsLetter((char)e.KeyCode) && e.Modifiers == Keys.Shift)
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.Oem1: wrote = ":"; break;
+                    case Keys.Oem7: wrote = "\""; break;
+                    case Keys.OemOpenBrackets: wrote = "{"; break;
+                    case Keys.Oem6: wrote = "}"; break;
+                    case Keys.Oem5: wrote = "|"; break;
+                    case Keys.Oemtilde: wrote = "~"; break;
+                    default: wrote = e.KeyCode.ToString(); break;
+                }
+            }
+            // nhap chu thuong
+            else if ((char.IsLetter((char)e.KeyCode) && e.Modifiers != Keys.Shift))
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.Oem1: wrote = ";"; break;
+                    case Keys.Oem7: wrote = "'"; break;
+                    case Keys.OemOpenBrackets: wrote = "["; break;
+                    case Keys.Oem6: wrote = "]"; break;
+                    case Keys.Oem5: wrote = @"\"; break;
+                    case Keys.Oemtilde: wrote = "`"; break;
+                    default: wrote = e.KeyCode.ToString().ToLower(); break;
+                }
+            }
+
+            if (wrote == "")//&& e.Modifiers!=Keys.Shift)
+            {
+                wrote = e.KeyCode.ToString();
+            }
+
+
+            //
+            if (wrote != "")
+            {
+                k = k + wrote + " ";
+            }
             label4.Text = k;
 
-            textBox1.Text = e.KeyCode.ToString();
-            textBox2.Text = e.KeyValue.ToString();
-            textBox3.Text = e.KeyData.ToString();
+            label6.Text = e.KeyCode.ToString();
+            label7.Text = e.KeyValue.ToString();
+            label8.Text = e.KeyData.ToString();
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
