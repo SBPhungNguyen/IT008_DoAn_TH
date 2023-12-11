@@ -10,7 +10,7 @@
 **Contributors:**
 -	Leader: Nguyễn Đặng Kim Phụng – 22521148 - [GitHub](https://github.com/SBPhungNguyen)
 -	Member: Phan Huỳnh Thiên Phúc – 22521139 - [GitHub](https://github.com/thienphuc1606)
--	Member: Nguyễn Thi Thanh Sương – 22521268 - [GitHub](https://github.com/nguyenthithanhsuong)
+-	Member: Nguyễn Thị Thanh Sương – 22521268 - [GitHub](https://github.com/nguyenthithanhsuong)
 
 **Supervisors:**
 -	Vũ Tuấn Hải - [GitHub](https://github.com/vutuanhai237)
